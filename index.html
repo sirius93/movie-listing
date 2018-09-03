@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <form class="search-form">
+        <input type="text" required/>
+        <input type="submit" id="search-button" />
+    </form>
+    <div id="movie-list-container">
+    </div>
+    
+    <script id="movie-list" type="text/template"> 
+        <p> {{movieTitle}} : {{movie_title}} </p>
+        <p>{{movieDirectrName}} : {{director_name}},</p>
+        <p>{{movieActorLead}}: {{actor_1_name}},</p>
+        <p>{{movieActorSubLead}} : {{actor_2_name}},</p>
+        <p>{{movieGenre}} : {{genres}},</p>
+        <p>{{movieLanguage}} : {{language}},</p>
+        <p>{{movieCountry}} : {{country}},</p>
+        <p>{{movieRating}} : {{content_rating}},</p>
+        <p>{{movieBudget}} : {{budget}},</p>
+        <p>{{movieYear}} : {{title_year}},</p>
+        <p>{{moviekeyWords}}:  {{plot_keywords}},</p>
+        <p>{{movieImdbUrl}} : {{movie_imdb_link}}</p>
+        <hr/>   
+    </script> 
+  <script src="js/scripts.js"></script>
+</body>
+</html>
