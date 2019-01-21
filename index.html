@@ -12,28 +12,60 @@
 
 </head>
 
-<body>
-    <form class="search-form">
+<body id="body" class="dark-mode">
+    <!-- <form class="search-form">
         <input type="text" required/>
         <input type="submit" id="search-button" />
-    </form>
+    </form> -->
+    <button type="button" name="dark_light" id="toggle-button" title="Toggle dark/light mode">Toggle colour</button>
     <div id="movie-list-container">
     </div>
-    
-    <script id="movie-list" type="text/template"> 
-        <p> {{movieTitle}} : {{movie_title}} </p>
-        <p>{{movieDirectrName}} : {{director_name}},</p>
-        <p>{{movieActorLead}}: {{actor_1_name}},</p>
-        <p>{{movieActorSubLead}} : {{actor_2_name}},</p>
-        <p>{{movieGenre}} : {{genres}},</p>
-        <p>{{movieLanguage}} : {{language}},</p>
-        <p>{{movieCountry}} : {{country}},</p>
-        <p>{{movieRating}} : {{content_rating}},</p>
-        <p>{{movieBudget}} : {{budget}},</p>
-        <p>{{movieYear}} : {{title_year}},</p>
-        <p>{{moviekeyWords}}:  {{plot_keywords}},</p>
-        <p>{{movieImdbUrl}} : {{movie_imdb_link}}</p>
-        <hr/>   
+    <div class="pagination">
+        <div id="pagination-previous">❮❮ Previous page</a>
+       
+    </div>
+    <div class="pagination">
+
+            <div id="pagination-next">Next Page ❯❯</a>
+        </div>
+    <script id="movie-list-header" type="text/template">
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name" class="filter__link" href="#">{{movieTitle}}</a></div>
+                <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">{{movieDirectrName}}</a></div>
+                <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">{{movieActorLead}}</a></div>
+                <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">{{movieActorSubLead}}</a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">{{movieGenre}}</a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">{{movieLanguage}} </a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">{{movieCountry}} </a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">{{movieRating}} </a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">{{movieBudget}} </a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">{{movieYear}} </a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">{{moviekeyWords}} </a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">{{movieImdbUrl}} </a></div>
+            </div>
+        </div>
+    </script>        
+    <script id="movie-list" type="text/template">
+        <div class="table">
+            <div class="table-content">	
+                <div class="table-row">		
+                    <div class="table-data">{{movie_title}}</div>
+                    <div class="table-data">{{director_name}}</div>
+                    <div class="table-data">{{actor_1_name}}</div>
+                    <div class="table-data">{{actor_2_name}}</div>
+                    <div class="table-data">{{genres}}</div>
+                    <div class="table-data">{{language}}</div>
+                    <div class="table-data">{{country}}</div>
+                    <div class="table-data">{{content_rating}}</div>
+                    <div class="table-data">{{budget}}</div>
+                    <div class="table-data">{{title_year}}</div>
+                    <div class="table-data">{{plot_keywords}}</div>
+                    <div class="table-data"><a href={{movie_imdb_link}} target="_blank" >IMDB URL</a></div>
+                </div>
+            </div>	
+        </div>
+    </div>  
     </script> 
   <script src="js/scripts.js"></script>
 </body>
